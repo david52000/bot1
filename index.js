@@ -106,6 +106,7 @@ bot.on("message", async function(message) {
                 .addField("?youtubelolox", "Pour avoir la chaine Youtube de Lolox !")
                 .addField("?twitch", "Pour avoir la chaine Twitch de Lolox !")
                 .addField("?mystik", "Pour avoir le forum !")
+                .addField("?collection", "Pour avoir la collection !")
                 .setColor("#00a1ff")
                 .setFooter("Idée de commandes ? Proposez des commandes à DaVid en MP !")
                 .setAuthor("Panel d'Aide de Mystik | Bot")
@@ -224,6 +225,11 @@ bot.on("message", async function(message) {
 
     case "mystik":
      message.reply("Voilà le forum: http://loloxcity.fr  :ok_hand:");
+     message.delete();
+    break;
+      
+     case "colection":
+     message.reply("Collection arrive bientôt Bon Jeux :wink: ");
      message.delete();
     break;
      
