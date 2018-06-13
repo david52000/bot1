@@ -65,7 +65,6 @@ bot.on("message", async function(message) {
                 .addField("?ping", "C'est pour savoir mon ping en ce moment")
                 .addField("?musique", "Jouer une musique !")
                 .addField("?membres", "Permet de savoir le nombre de personnes sur le Discord")
-                .addField("?traductionhelp", "Pour afficher le Panel d'Aide de Traduction") 
                 .addField("?google", "Faite cette commande + (la recherche que vous souhaitez faire) !")
                 .addField("?youtube", "Faite cette commande + (la recherche que vous souhaitez faire)")
                 .addField("?youtubelolox", "Pour avoir la chaine Youtube de Lolox !")
@@ -79,59 +78,7 @@ bot.on("message", async function(message) {
                 message.delete()
                 message.channel.sendEmbed(embed)
             break;
-
-        case "traductionhelp":
-            var embed = new Discord.RichEmbed()
-                 .addField("?tradenfr", "Traduction Anglais ==> Français !") 
-                 .addField("?tradfren", "Traduction Français ==> Anglais !")
-                 .addField("?tradesfr", "Traduction Espagnol ==> Français !")
-                 .addField("?tradfres", "Taduction Français ==> Espagnol !")
-                 .addField("?tradesen", "Traduction Espagnol ==> Anglais !")
-                 .addField("?tradenes", "Taduction Anglais ==> Espagnol !")            
-                .setColor("#ff0021")
-                .setAuthor("Pannel de Traduction")
-                .setDescription("Petit rappelle, je vais seulement envoyé un liens google traduction !")
-                .setTimestamp()
-                message.delete()
-                message.channel.sendEmbed(embed)
-             console.log("Il veut traduire" + message.author.username + "!")
-            break;
-
-        case "tradenfr":
-        let tradenfr = message.content.split(' ');
-        tradenfr.shift();
-        console.log("Traduction Anglais ==> Français");
-        message.reply('https://translate.google.fr/#en/fr/' + tradenfr.join('%20'));
-        break;
-
-        case "tradfren":
-         let tradfren = message.content.split(' ');
-         tradfren.shift();
-         console.log("Traduction Français ==> Anglais");
-         message.reply('https://translate.google.fr/#fr/en/' + tradfren.join('%20'));
-         break;
-
-         case "tradesfr":
-         let tradesfr = message.content.split(' ');
-         tradesfr.shift();
-         console.log("Traduction Espagnol ==> Français");
-         message.reply('https://translate.google.fr/#es/fr/' + tradesfr.join('%20'));
-         break;
       
-        case "tradfres":
-         let tradfres = message.content.split(' ');
-         tradfres.shift();
-         console.log("Traduction Français ==> Espagnol");
-         message.reply('https://translate.google.fr/#fr/es/' + tradfres.join('%20'));
-         break;      
-      
-        case "tradenes":
-         let tradenes = message.content.split(' ');
-         tradenes.shift();
-         console.log("Traduction Anglais ==> Espagnol");
-         message.reply('https://translate.google.fr/#en/es/' + tradesen.join('%20'))
-         break;
-
         case "ping":
         message.channel.sendMessage("Pong! J'ai actuellement `" + bot.ping + " ms !`");
         message.delete();
