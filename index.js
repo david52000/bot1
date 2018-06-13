@@ -128,7 +128,7 @@ bot.on("message", async function(message) {
                 .addField("!@annonce", "Met un message dans information avec une mention dans lequel vous avez écrit, faites !@annonce (dans un channel) + le texte que vous voulez mettre")
                 .addField("!warn", "Pour l'utiliser, faite la commande + mention de la personne + raison")
                 .setColor("#ff0000")
-                .setFooter("Idée de commandes ? Proposez des commandes à Quentinium en MP !")
+                .setFooter("Idée de commandes ? Proposez des commandes à DaVid en MP !")
                 .setAuthor("Panel d'Aide Admin")
                 .setDescription("Voici mes commandes d'Admin")
                 .setTimestamp()
