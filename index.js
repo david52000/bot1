@@ -24,7 +24,7 @@ function play(connection, message) {
 }
 
 bot.on("ready", function() {
-    bot.user.setGame("Mystik Roleplay | !aide | By DaVid");
+    bot.user.setGame("Mystik Roleplay | ?aide | By DaVid");
     console.log("Le Bot Lolox est connecté")
 });
 
