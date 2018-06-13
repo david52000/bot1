@@ -107,7 +107,7 @@ bot.on("message", async function(message) {
                 .addField("!twitchlolox", "Pour avoir la chaine Twitch de Lolox !")
                 .addField("!forum", "Pour avoir le forum !")
                 .setColor("#00a1ff")
-                .setFooter("Idée de commandes ? Proposez des commandes à DaVid en MP ! PS : Merci à Lolox pour l'idée du BOT")
+                .setFooter("Idée de commandes ? Proposez des commandes à DaVid en MP !")
                 .setAuthor("Panel d'Aide de Mystik | Bot")
                 .setDescription("Voici mes commandes")
                 .setTimestamp()
