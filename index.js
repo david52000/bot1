@@ -30,7 +30,7 @@ bot.on("ready", function() {
 
 bot.on("guildMemberAdd", function(member) {
     let role = member.guild.roles.find("name", "Viewers");
-    member.guild.channels.find("name", "général").sendMessage(member.toString() + " Bienvenue sur Lolox Army (Mystik Roleplay), installe toi tranquillement ! ");
+    member.guild.channels.find("name", "général").sendMessage(member.toString() + " Bienvenue sur Lolox Army (Mystik Roleplay), installe toi tranquillement ! :wink: :wink:  ");
     member.addRole(role);
 });
 
@@ -239,7 +239,7 @@ bot.on("message", async function(message) {
     break;
 
     case "twitch":
-     message.reply("Voilà sa Chaine: https://www.twitch.tv/lolox_fr  Bon Live");
+     message.reply("Voilà sa Chaine: https://www.twitch.tv/lolox_fr  Bon Live :wink: ");
      message.delete();
     break;
 
