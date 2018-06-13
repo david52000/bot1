@@ -228,7 +228,7 @@ bot.on("message", async function(message) {
      message.delete();
     break;
       
-     case "colection":
+     case "collection":
      message.reply("Collection arrive bientôt Bon Jeux :wink: ");
      message.delete();
     break;
