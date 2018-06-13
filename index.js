@@ -106,7 +106,6 @@ bot.on("message", async function(message) {
                 .addField("?youtubelolox", "Pour avoir la chaine Youtube de Lolox !")
                 .addField("?twitch", "Pour avoir la chaine Twitch de Lolox !")
                 .addField("?mystik", "Pour avoir le forum !")
-                .addField("?collection," "Pour la collection du serveur")
                 .setColor("#00a1ff")
                 .setFooter("Idée de commandes ? Proposez des commandes à DaVid en MP !")
                 .setAuthor("Panel d'Aide de Mystik | Bot")
@@ -227,11 +226,7 @@ bot.on("message", async function(message) {
      message.reply("Voilà le forum: http://loloxcity.fr  :ok_hand:");
      message.delete();
     break;
-      
-     case "collection":
-     message.reply("Voilà la Collection: Arrive a l'ouverture  Bon jeux :wink: ");
-     message.delete();
-    break;
+     
 
     case "annonce":
          if(!message.member.hasPermission("MANAGE_GUILD")) return message.channel.sendMessage("Tu ne peux exécuter cette commande. ❌");
