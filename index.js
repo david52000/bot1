@@ -310,4 +310,5 @@ bot.on("message", async function(message) {
     }
 });
 
-bot.login("NDUwNzExNjg1Nzc1NDkxMDcy.DgK3VA.OVwcxuS3WFqfKK7Zuii9t2i2y1s");
+
+bot.login(process.env.TOKEN);
