@@ -54,7 +54,7 @@ bot.on("message", async function(message) {
     var guild = message.guild;
     
     var member = message.member;
-    
+   
     var modlog = member.guild.channels.find("name", "logs")
     
     var user = message.mentions.users.first();
@@ -110,27 +110,6 @@ bot.on("message", async function(message) {
                 .setFooter("Idée de commandes ? Proposez des commandes à DaVid en MP !")
                 .setAuthor("Panel d'Aide de Mystik | Bot")
                 .setDescription("Voici mes commandes")
-                .setTimestamp()
-                message.delete()
-                message.channel.sendEmbed(embed)
-            break;
-
-            case "admin":
-            if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.sendMessage("Tu ne peux exécuter cette commande. ❌");
-            var messagecount = parseInt(args2.join(" "));
-            message.channel.fetchMessages({
-            limit: messagecount
-            }).then(messages => message.channel.bulkDelete(messagecount));
-                    message.delete()
-            var embed = new Discord.RichEmbed()
-                .addField("!purge", "Pour supprimer les messages, faites !purge + (le nombre de message à supprimer dans le channel)")
-                .addField("!annonce", "Met un message dans Information, faites !annonce + (le message à mettre dans information)")
-                .addField("!@annonce", "Met un message dans information avec une mention dans lequel vous avez écrit, faites !@annonce (dans un channel) + le texte que vous voulez mettre")
-                .addField("!warn", "Pour l'utiliser, faite la commande + mention de la personne + raison")
-                .setColor("#ff0000")
-                .setFooter("Idée de commandes ? Proposez des commandes à DaVid en MP !")
-                .setAuthor("Panel d'Aide Admin")
-                .setDescription("Voici mes commandes d'Admin")
                 .setTimestamp()
                 message.delete()
                 message.channel.sendEmbed(embed)
