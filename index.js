@@ -24,7 +24,7 @@ function play(connection, message) {
 }
 
 bot.on("ready", function() {
-    bot.user.setGame("Mystik Roleplay | ?aide | By DaVid");
+    bot.user.setGame("Mystik Roleplay | ?aide |");
     console.log("Le Bot Lolox est connecté")
 });
 
@@ -106,6 +106,7 @@ bot.on("message", async function(message) {
                 .addField("?youtubelolox", "Pour avoir la chaine Youtube de Lolox !")
                 .addField("?twitch", "Pour avoir la chaine Twitch de Lolox !")
                 .addField("?mystik", "Pour avoir le forum !")
+                .addField("?collection," "Pour la collection du serveur")
                 .setColor("#00a1ff")
                 .setFooter("Idée de commandes ? Proposez des commandes à DaVid en MP !")
                 .setAuthor("Panel d'Aide de Mystik | Bot")
@@ -226,6 +227,11 @@ bot.on("message", async function(message) {
      message.reply("Voilà le forum: http://loloxcity.fr  :ok_hand:");
      message.delete();
     break;
+      
+     case "collection":
+     message.reply("Voilà la Collection: Arrive a l'ouverture  Bon jeux :wink: ");
+     message.delete();
+    break;
 
     case "annonce":
          if(!message.member.hasPermission("MANAGE_GUILD")) return message.channel.sendMessage("Tu ne peux exécuter cette commande. ❌");
@@ -261,27 +267,6 @@ bot.on("message", async function(message) {
      message.channel.send("@everyone Du nouveau sur le serveur, regardez dans #information !")
      member.guild.channels.find("name", "information").sendEmbed(embed);
      break;
-
-     case "warn":
-            if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.sendMessage("Tu n'as pas la permission d'exécuter cette commande. :x:");
-            if (reason.length < 1) return message.reply("Tu as oublié la raison ! :D");
-            if (message.mentions.users.size < 1) return message.reply("Tu n'as pas mis son pseudo au complet ! :o")
-            message.channel.send(user.toString() + " a été averti pour " + reason + " :white_check_mark:")
-            var messagecount = parseInt(args2.join(" "));
-            message.channel.fetchMessages({
-                limit: messagecount
-            }).then(messages => message.channel.bulkDelete(messagecount));
-                        message.delete()
-            var embed = new Discord.RichEmbed()
-            .addField("Commande :", "Warn")
-            .addField("Modérateur :", message.author.username)
-            .addField("Heure:", message.channel.createdAt)
-            .setColor("#009999")
-            .setFooter("Ouf ! Sa as fait un bon ménage dans le serveur ! ^^")
-            message.delete()
-            member.guild.channels.find("name", "liste-warn").sendEmbed(embed);
-            member.guild.channels.find("name", "logs").sendEmbed(embed);
-            break;
 
         default:
             message.channel.sendMessage("Commande invalide Fait ?help pour voir toutes les commandes disponibles !")
