@@ -60,45 +60,10 @@ bot.on("message", async function(message) {
     var user = message.mentions.users.first();
 
     switch (args[0].toLowerCase()) {
-        case "play":
-            if (!args[1]) {
-             message.channel.sendMessage("[` Musique`] - Vous devez mettre un lien.");   
-             return;
-            }
-            if(!message.member.voiceChannel) {
-             message.channel.sendMessage("[` Musique`] - Vous devez être dans un salon vocal.");   
-             return;
-            }
-            
-            if(!servers[message.guild.id]) servers[message.guild.id] = {
-                queue: []
-            };
-            
-            var server = servers[message.guild.id];
-      
-            server.queue.push(args[1]);
-            
-            if(!message.guild.voiceConnection) message.member.voiceChannel.join().then(function(connection) {
-               play(connection, message) 
-            });
-        break;    
-
-        
-
-        case "stop":
-             if(!message.member.voiceChannel) {
-             message.channel.sendMessage("[` Musique`] - Vous devez être dans un **salon vocal**.");   
-             return;
-            }
-            var server = servers[message.guild.id];
-            if(server.dispatcher) server.dispatcher.end();
-        break;
-
         case "aide":
             var embed = new Discord.RichEmbed()
                 .addField("?ping", "C'est pour savoir mon ping en ce moment")
-                .addField("?play", "Jouer une musique !  Pour l'utiliser, faites !play (lien) !")
-                .addField("?stop", "Arreter la musique  Pour l'utiliser, faites !stop !")
+                .addField("?musique", "Jouer une musique !")
                 .addField("?membres", "Permet de savoir le nombre de personnes sur le Discord")
                 .addField("?traductionhelp", "Pour afficher le Panel d'Aide de Traduction") 
                 .addField("?google", "Faite cette commande + (la recherche que vous souhaitez faire) !")
@@ -225,6 +190,12 @@ bot.on("message", async function(message) {
      message.reply("Voilà le forum: http://loloxcity.fr  :ok_hand:");
      message.delete();
     break;
+      
+      case "musique":
+     message.reply("Voie avec l'autre bot : @Lolox-BOT#1307 !");
+     message.delete();
+    break;
+        
       
      case "collection":
      message.reply("Collection arrive bientôt Bon Jeux :wink: ");
