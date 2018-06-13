@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const YTDL = require("ytdl-core");
-const PREFIX = "!";
+const PREFIX = "?";
 const queue = new Map();
 const EVERYONE = "@";
 
@@ -24,7 +24,7 @@ function play(connection, message) {
 }
 
 bot.on("ready", function() {
-    bot.user.setGame("Mystik Roleplay | !help | By DaVid");
+    bot.user.setGame("Mystik Roleplay | !aide | By DaVid");
     console.log("Le Bot Lolox est connecté")
 });
 
@@ -94,18 +94,18 @@ bot.on("message", async function(message) {
             if(server.dispatcher) server.dispatcher.end();
         break;
 
-        case "help":
+        case "aide":
             var embed = new Discord.RichEmbed()
-                .addField("!ping", "C'est pour savoir mon ping en ce moment")
-                .addField("!play", "Jouer une musique !  Pour l'utiliser, faites !play (lien) !")
-                .addField("!stop", "Arreter la musique  Pour l'utiliser, faites !stop !")
-                .addField("!membres", "Permet de savoir le nombre de personnes sur le Discord")
-                .addField("!traductionhelp", "Pour afficher le Panel d'Aide de Traduction") 
-                .addField("!google", "Faite cette commande + (la recherche que vous souhaitez faire) !")
-                .addField("!youtube", "Faite cette commande + (la recherche que vous souhaitez faire)")
-                .addField("!youtubelolox", "Pour avoir la chaine Youtube de Lolox !")
-                .addField("!twitch", "Pour avoir la chaine Twitch de Lolox !")
-                .addField("!mystik", "Pour avoir le forum !")
+                .addField("?ping", "C'est pour savoir mon ping en ce moment")
+                .addField("?play", "Jouer une musique !  Pour l'utiliser, faites !play (lien) !")
+                .addField("?stop", "Arreter la musique  Pour l'utiliser, faites !stop !")
+                .addField("?membres", "Permet de savoir le nombre de personnes sur le Discord")
+                .addField("?traductionhelp", "Pour afficher le Panel d'Aide de Traduction") 
+                .addField("?google", "Faite cette commande + (la recherche que vous souhaitez faire) !")
+                .addField("?youtube", "Faite cette commande + (la recherche que vous souhaitez faire)")
+                .addField("?youtubelolox", "Pour avoir la chaine Youtube de Lolox !")
+                .addField("?twitch", "Pour avoir la chaine Twitch de Lolox !")
+                .addField("?mystik", "Pour avoir le forum !")
                 .setColor("#00a1ff")
                 .setFooter("Idée de commandes ? Proposez des commandes à DaVid en MP !")
                 .setAuthor("Panel d'Aide de Mystik | Bot")
@@ -117,12 +117,12 @@ bot.on("message", async function(message) {
 
         case "traductionhelp":
             var embed = new Discord.RichEmbed()
-                 .addField("!tradenfr", "Traduction Anglais ==> Français !") 
-                 .addField("!tradfren", "Traduction Français ==> Anglais !")
-                 .addField("!tradesfr", "Traduction Espagnol ==> Français !")
-                 .addField("!tradfres", "Taduction Français ==> Espagnol !")
-                 .addField("!tradesen", "Traduction Espagnol ==> Anglais !")
-                 .addField("!tradenes", "Taduction Anglais ==> Espagnol !")            
+                 .addField("?tradenfr", "Traduction Anglais ==> Français !") 
+                 .addField("?tradfren", "Traduction Français ==> Anglais !")
+                 .addField("?tradesfr", "Traduction Espagnol ==> Français !")
+                 .addField("?tradfres", "Taduction Français ==> Espagnol !")
+                 .addField("?tradesen", "Traduction Espagnol ==> Anglais !")
+                 .addField("?tradenes", "Taduction Anglais ==> Espagnol !")            
                 .setColor("#ff0021")
                 .setFooter("Amuse toi à traduire petit enfant !")
                 .setAuthor("Pannel d'Aide de Traduction")
@@ -284,7 +284,7 @@ bot.on("message", async function(message) {
             break;
 
         default:
-            message.channel.sendMessage("Commande invalide Fait !help pour voir toutes les commandes disponibles !")
+            message.channel.sendMessage("Commande invalide Fait ?help pour voir toutes les commandes disponibles !")
             message.delete();
     }
 });
