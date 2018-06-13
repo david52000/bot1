@@ -24,13 +24,13 @@ function play(connection, message) {
 }
 
 bot.on("ready", function() {
-    bot.user.setGame("Mystik Roleplay | !help");
+    bot.user.setGame("Mystik Roleplay | !help | By DaVid");
     console.log("Le Bot Lolox est connecté")
 });
 
 bot.on("guildMemberAdd", function(member) {
     let role = member.guild.roles.find("name", "Viewers");
-    member.guild.channels.find("name", "général").sendMessage(member.toString() + " Bienvenue sur Lolox Army, installe toi tranquillement ! ");
+    member.guild.channels.find("name", "général").sendMessage(member.toString() + " Bienvenue sur Lolox Army (Mystik Roleplay), installe toi tranquillement ! ");
     member.addRole(role);
 });
 
@@ -62,11 +62,11 @@ bot.on("message", async function(message) {
     switch (args[0].toLowerCase()) {
         case "play":
             if (!args[1]) {
-             message.channel.sendMessage("[`Assisants Musique`] - Vous devez mettre un lien.");   
+             message.channel.sendMessage("[` Musique`] - Vous devez mettre un lien.");   
              return;
             }
             if(!message.member.voiceChannel) {
-             message.channel.sendMessage("[`Assisants Musique`] - Vous devez être dans un salon vocal.");   
+             message.channel.sendMessage("[` Musique`] - Vous devez être dans un salon vocal.");   
              return;
             }
             
@@ -87,7 +87,7 @@ bot.on("message", async function(message) {
 
         case "stop":
              if(!message.member.voiceChannel) {
-             message.channel.sendMessage("[`Assisants Musique`] - Vous devez être dans un **salon vocal**.");   
+             message.channel.sendMessage("[` Musique`] - Vous devez être dans un **salon vocal**.");   
              return;
             }
             var server = servers[message.guild.id];
@@ -104,7 +104,7 @@ bot.on("message", async function(message) {
                 .addField("!google", "Faite cette commande + (la recherche que vous souhaitez faire) !")
                 .addField("!youtube", "Faite cette commande + (la recherche que vous souhaitez faire)")
                 .addField("!youtubelolox", "Pour avoir la chaine Youtube de Lolox !")
-                .addField("!twitchlolox", "Pour avoir la chaine Twitch de Lolox !")
+                .addField("!twitch", "Pour avoir la chaine Twitch de Lolox !")
                 .addField("!forum", "Pour avoir le forum !")
                 .setColor("#00a1ff")
                 .setFooter("Idée de commandes ? Proposez des commandes à DaVid en MP !")
@@ -238,7 +238,7 @@ bot.on("message", async function(message) {
      message.delete();
     break;
 
-    case "twitchlolox":
+    case "twitch":
      message.reply("Voilà sa Chaine: https://www.twitch.tv/lolox_fr  :ok_hand:");
      message.delete();
     break;
