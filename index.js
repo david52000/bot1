@@ -239,7 +239,7 @@ bot.on("message", async function(message) {
     break;
 
     case "twitch":
-     message.reply("Voilà sa Chaine: https://www.twitch.tv/lolox_fr  :ok_hand:");
+     message.reply("Voilà sa Chaine: https://www.twitch.tv/lolox_fr  Bon Live");
      message.delete();
     break;
 
