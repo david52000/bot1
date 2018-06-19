@@ -138,6 +138,14 @@ bot.on("message", async function(message) {
      message.delete();
     break;
       
+      case "promo1":
+
+     message.reply("Code n°1 : A7CLXT5IBTFSJ5ZK");
+
+     message.delete();
+
+    break;
+      
       case "musique":
      message.reply("Voie avec l'autre bot : @Lolox-BOT#1307 !");
      message.delete();
