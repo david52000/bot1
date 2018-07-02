@@ -71,6 +71,7 @@ bot.on("message", async function(message) {
                 .addField("?twitch", "Pour avoir la chaine Twitch de Lolox !")
                 .addField("?mystik", "Pour avoir le forum !")
                 .addField("?collection", "Pour avoir la collection !")
+                .addField("?promo", "Arrive bientôt !")
                 .setColor("#00a1ff")
                 .setAuthor("Aide de Mystik | Bot")
                 .setDescription("Voici les commandes")
@@ -138,9 +139,9 @@ bot.on("message", async function(message) {
      message.delete();
     break;
       
-      case "promo1":
+      case "promo":
 
-     message.reply("Code n°1 : A7CLXT5IBTFSJ5ZK");
+     message.reply("Code arrive bientôt");
 
      message.delete();
 
