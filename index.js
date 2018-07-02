@@ -30,7 +30,7 @@ bot.on("ready", function() {
 
 bot.on("guildMemberAdd", function(member) {
     let role = member.guild.roles.find("name", "Viewers");
-    member.guild.channels.find("name", "général").sendMessage(member.toString() + " Bienvenue sur Lolox Army (Mystik Roleplay), installe toi tranquillement ! :wink: :wink:  ");
+    member.guild.channels.find("name", "général").sendMessage(member.toString() + " Bienvenue sur Mystik Roleplay, installe toi tranquillement ! :wink: :wink:  ");
     member.addRole(role);
 });
 
@@ -134,7 +134,7 @@ bot.on("message", async function(message) {
     break;
 
     case "mystik":
-     message.reply("Voilà le forum: http://loloxcity.fr  :ok_hand:");
+     message.reply("Voilà le forum: http://gogoletuto52.esy.es  :ok_hand:");
      message.delete();
     break;
       
@@ -147,7 +147,7 @@ bot.on("message", async function(message) {
     break;
       
       case "musique":
-     message.reply("Voie avec l'autre bot : @Lolox-BOT#1307 !");
+     message.reply("Voie avec l'administration !");
      message.delete();
     break;
         
