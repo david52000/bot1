@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const YTDL = require("ytdl-core");
-const PREFIX = "?";
+const PREFIX = "*";
 const queue = new Map();
 const EVERYONE = "@";
 
@@ -24,7 +24,7 @@ function play(connection, message) {
 }
 
 bot.on("ready", function() {
-    bot.user.setGame("Mystik Roleplay | ?aide | By DaVid");
+    bot.user.setGame("Mystik Roleplay | *aide | By DaVid");
     console.log("Le Bot Lolox est connecté")
 });
 
@@ -62,16 +62,16 @@ bot.on("message", async function(message) {
     switch (args[0].toLowerCase()) {
         case "aide":
             var embed = new Discord.RichEmbed()
-                .addField("?ping", "C'est pour savoir mon ping en ce moment")
-                .addField("?musique", "Jouer une musique !")
-                .addField("?membres", "Permet de savoir le nombre de personnes sur le Discord")
-                .addField("?google", "Faite cette commande + (la recherche que vous souhaitez faire) !")
-                .addField("?youtube", "Faite cette commande + (la recherche que vous souhaitez faire)")
-                .addField("?youtubelolox", "Pour avoir la chaine Youtube de Lolox !")
-                .addField("?twitch", "Pour avoir la chaine Twitch de Lolox !")
-                .addField("?mystik", "Pour avoir le forum !")
-                .addField("?collection", "Pour avoir la collection !")
-                .addField("?promo", "Arrive bientôt !")
+                .addField("*ping", "C'est pour savoir mon ping en ce moment")
+                .addField("*musique", "Jouer une musique !")
+                .addField("*membres", "Permet de savoir le nombre de personnes sur le Discord")
+                .addField("*google", "Faite cette commande + (la recherche que vous souhaitez faire) !")
+                .addField("*youtube", "Faite cette commande + (la recherche que vous souhaitez faire)")
+                .addField("*youtubelolox", "Pour avoir la chaine Youtube de Lolox !")
+                .addField("*twitch", "Pour avoir la chaine Twitch de Lolox !")
+                .addField("*mystik", "Pour avoir le forum !")
+                .addField("*collection", "Pour avoir la collection !")
+                .addField("*promo", "Arrive bientôt !")
                 .setColor("#00a1ff")
                 .setAuthor("Aide de Mystik | Bot")
                 .setDescription("Voici les commandes")
@@ -195,7 +195,7 @@ bot.on("message", async function(message) {
      break;
 
         default:
-            message.channel.sendMessage("Commande invalide Fait ?help pour voir toutes les commandes disponibles !")
+            message.channel.sendMessage("Commande invalide Fait *aide pour voir toutes les commandes disponibles !")
             message.delete();
     }
 });
