@@ -232,50 +232,6 @@ bot.on("message", async function(message) {
      message.channel.send("@everyone Du nouveau sur le serveur, regardez dans #information !")
      member.guild.channels.find("name", "information").sendEmbed(embed);
      break;
-
-       
- 
- case "warn":
-
-            if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.sendMessage("Tu n'as pas la permission d'exécuter cette commande. :x:");
-
-            if (reason.length < 1) return message.reply("Tu as oublié la raison ! :D");
-
-            if (message.mentions.users.size < 1) return message.reply("Tu n'as pas mis son pseudo au complet ! :o")
-
-            message.channel.send(user.toString() + " a été averti pour " + reason + " :white_check_mark:")
-
-            var messagecount = parseInt(args2.join(" "));
-
-            message.channel.fetchMessages({
-
-                limit: messagecount
-
-            }).then(messages => message.channel.bulkDelete(messagecount));
-
-                        message.delete()
-
-            var embed = new Discord.RichEmbed()
-
-            .addField("Commande :", "Warn")
-
-            .addField("Modérateur :", message.author.username)
-
-            .addField("Raison", reason)
-
-            .addField("Heure:", message.channel.createdAt)
-
-            .setColor("#009999")
-
-            .setFooter("Le warn a été réalisé avec succès ! ^^")
-
-            message.delete()
-
-            member.guild.channels.find("name", "liste-warn").sendEmbed(embed);
-
-            member.guild.channels.find("name", "logs").sendEmbed(embed);
-
-            break;
       
        default:
             message.channel.sendMessage("Commande invalide Fait *aide pour voir toutes les commandes disponibles !")
