@@ -233,10 +233,7 @@ bot.on("message", async function(message) {
      member.guild.channels.find("name", "information").sendEmbed(embed);
      break;
 
-        default:
-            message.channel.sendMessage("Commande invalide Fait *aide pour voir toutes les commandes disponibles !")
-            message.delete();
-    }
+       
  
  case "warn":
 
@@ -279,6 +276,11 @@ bot.on("message", async function(message) {
             member.guild.channels.find("name", "logs").sendEmbed(embed);
 
             break;
+      
+       default:
+            message.channel.sendMessage("Commande invalide Fait *aide pour voir toutes les commandes disponibles !")
+            message.delete();
+    }
 });
 
 
