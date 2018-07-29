@@ -24,13 +24,13 @@ function play(connection, message) {
 }
 
 bot.on("ready", function() {
-    bot.user.setGame("Mystik Roleplay | *aide | By DaVid");
+    bot.user.setGame("Evoria-Life | *aide | By DaVid");
     console.log("Le Bot Lolox est connecté")
 });
 
 bot.on("guildMemberAdd", function(member) {
     let role = member.guild.roles.find("name", "Viewers");
-    member.guild.channels.find("name", "général").sendMessage(member.toString() + " Bienvenue sur Mystik Roleplay, installe toi tranquillement ! :wink: :wink:  ");
+    member.guild.channels.find("name", "général").sendMessage(member.toString() + " Bienvenue sur Evoria-Life, installe toi tranquillement ! :wink: :wink:  ");
     member.addRole(role);
 });
 
