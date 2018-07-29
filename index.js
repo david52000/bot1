@@ -134,8 +134,8 @@ bot.on("message", async function(message) {
      message.delete();
     break;
 
-    case "mystik":
-     message.reply("Voilà le forum: http://gogoletuto52.esy.es  :ok_hand:");
+    case "evoria":
+     message.reply("Voilà le discord: https://discord.gg/cSTeY7y  :ok_hand:");
      message.delete();
     break;
       
