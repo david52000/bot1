@@ -71,7 +71,7 @@ bot.on("message", async function(message) {
                 .addField("*twitch", "Pour avoir la chaine Twitch de Lolox !")
                 .addField("*mystik", "Pour avoir le forum !")
                 .addField("*collection", "Pour avoir la collection !")
-                .addField("*promo", "Arrive bientôt !")
+                .addField("*serveur", " serveur Arma3")
                 .setColor("#00a1ff")
                 .setAuthor("Aide de Mystik | Bot")
                 .setDescription("Voici les commandes")
@@ -139,9 +139,9 @@ bot.on("message", async function(message) {
      message.delete();
     break;
       
-      case "promo":
+      case "serveur":
 
-     message.reply("Code arrive bientôt");
+     message.reply("Serveur arrive dans quelque temps");
 
      message.delete();
 
