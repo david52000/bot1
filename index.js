@@ -69,7 +69,7 @@ bot.on("message", async function(message) {
                 .addField("*youtube", "Faite cette commande + (la recherche que vous souhaitez faire)")
                 .addField("*youtubelolox", "Pour avoir la chaine Youtube de Lolox !")
                 .addField("*twitch", "Pour avoir la chaine Twitch de Lolox !")
-                .addField("*mystik", "Pour avoir le forum !")
+                .addField("*ts", "Ip du TeamSpeak3")
                 .addField("*collection", "Pour avoir la collection !")
                 .addField("*serveur", " Serveur Arma3")
                 .setColor("#00a1ff")
@@ -126,6 +126,11 @@ bot.on("message", async function(message) {
 
     case "youtubelolox":
      message.reply("Voilà sa Chaine: https://www.youtube.com/channel/UCQmyH_HI5Sl41oBqGw7o7gw :ok_hand:");
+     message.delete();
+    break;
+      
+      case "ts":
+     message.reply("Voilà l'ip du TeamSpeak: 176.190.225.113 :ok_hand:");
      message.delete();
     break;
 
