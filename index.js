@@ -178,7 +178,7 @@ bot.on("message", async function(message) {
 
                 .addField("*.annonce", "Met un message dans Information, faites a.annonce + (le message à mettre dans information)")
 
-                .addField("*.@annonce", "Met un message dans information avec une mention dans lequel vous avez écrit, faites a.@annonce (dans un channel) + le texte que vous voulez mettre")
+                .addField("*.@annonce", "Met un message dans information avec une mention dans lequel vous avez écrit, faites *.@annonce (dans un channel) + le texte que vous voulez mettre")
 
                 .addField("*.warn", "Pour l'utiliser, faite la commande + mention de la personne + raison")
 
