@@ -67,10 +67,10 @@ bot.on("message", async function(message) {
                 .addField("*membres", "Permet de savoir le nombre de personnes sur le Discord")
                 .addField("*google", "Faite cette commande + (la recherche que vous souhaitez faire) !")
                 .addField("*youtube", "Faite cette commande + (la recherche que vous souhaitez faire)")
-                .addField("*youtubelolox", "Pour avoir la chaine Youtube de Lolox !")
                 .addField("*twitch", "Pour avoir la chaine Twitch de Lolox !")
                 .addField("*ts", "Ip du TeamSpeak3")
                 .addField("*collection", "Pour avoir la collection !")
+                .addField("*tuto", "Tuto Evoria")
                 .addField("*serveur", " Serveur Arma3")
                 .setColor("#00a1ff")
                 .setAuthor("Aide de Evoria | Bot")
@@ -124,8 +124,8 @@ bot.on("message", async function(message) {
     message.delete();
     break;
 
-    case "youtubelolox":
-     message.reply("Voilà sa Chaine: https://www.youtube.com/channel/UCQmyH_HI5Sl41oBqGw7o7gw :ok_hand:");
+    case "tuto":
+     message.reply("Voilà sa Chaine: https://www.youtube.com/channel/UC_QFfWt3GnIv2CyixrtWw1g :ok_hand:");
      message.delete();
     break;
       
