@@ -71,6 +71,7 @@ bot.on("message", async function(message) {
                 .addField("*ts", "Ip du TeamSpeak3")
                 .addField("*collection", "Pour avoir la collection !")
                 .addField("*tuto", "Tuto Evoria")
+                .addField("*fofo", "Forum")
                 .addField("*serveur", " Serveur Arma3")
                 .setColor("#00a1ff")
                 .setAuthor("Aide de Evoria | Bot")
@@ -126,6 +127,11 @@ bot.on("message", async function(message) {
 
     case "tuto":
      message.reply("Voilà la Chaine Youtube de Evoria: https://www.youtube.com/channel/UC_QFfWt3GnIv2CyixrtWw1g :ok_hand:");
+     message.delete();
+    break;
+      
+     case "fofo":
+     message.reply("Voilà le Forum de Evoria: http://176.190.225.113/ :ok_hand:");
      message.delete();
     break;
       
